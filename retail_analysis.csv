@@ -1,0 +1,99 @@
+Category,Buyer,,Suburb,Postcode,Manager,,State,Suburb,Postcode,,Date,Financial Year,FY Qtr,FY Month
+Womens,Amy Buchanan,,Darwin,800,Michael Carney,, ACT,Belconnen,2617,,01/01/2016,2015/16,2016 Q3,7
+Mens,Bruce Curran,,Alice Springs,870,Michael Carney,, ACT,Fyshwick,2609,,01/02/2016,2015/16,2016 Q3,8
+Kids,Elizabeth Gentry,,Alexandria,2015,Jeremy Garcia,, NSW,Alexandria,2015,,01/03/2016,2015/16,2016 Q3,9
+Juniors,Chester George,,Mascot,2020,Jeremy Garcia,, NSW,Armidale,2350,,01/04/2016,2015/16,2016 Q4,10
+Shoes,Howard Wright,,Randwick,2031,Jeremy Garcia,, NSW,Artarmon,2064,,01/05/2016,2015/16,2016 Q4,11
+Intimate,Sara Ferrell,,Artarmon,2064,Jeremy Garcia,, NSW,Ashfield,2131,,01/06/2016,2015/16,2016 Q4,12
+Hosiery,Ella Hickman,,Chatswood,2067,Jeremy Garcia,, NSW,Ballina,2478,,01/07/2016,2016/17,2017 Q1,1
+Accessories,Maggie Mayer,,Narrabeen,2101,Lillian Pruitt,, NSW,Bathurst,2795,,01/08/2016,2016/17,2017 Q1,2
+Home,Richard Carr,,Rydalmere,2116,Lillian Pruitt,, NSW,Campbelltown,2560,,01/09/2016,2016/17,2017 Q1,3
+Groceries,Chris Monroe,,Thornleigh,2120,Lillian Pruitt,, NSW,Castle Hill,2154,,01/10/2016,2016/17,2017 Q2,4
+,,,Ashfield,2131,Lillian Pruitt,, NSW,Chatswood,2067,,01/11/2016,2016/17,2017 Q2,5
+,,,Lidcombe,2141,Lillian Pruitt,, NSW,Dubbo,2830,,01/12/2016,2016/17,2017 Q2,6
+,,,Castle Hill,2154,Lillian Pruitt,, NSW,Dural,2158,,01/01/2017,2016/17,2017 Q3,7
+,,,Dural,2158,Lillian Pruitt,, NSW,Lidcombe,2141,,01/02/2017,2016/17,2017 Q3,8
+,,,Armidale,2350,Claire Bridges,, NSW,Lismore,2480,,01/03/2017,2016/17,2017 Q3,9
+,,,Ballina,2478,Claire Bridges,, NSW,Lithgow,2790,,01/04/2017,2016/17,2017 Q4,10
+,,,Lismore,2480,Claire Bridges,, NSW,Mascot,2020,,01/05/2017,2016/17,2017 Q4,11
+,,,Tweed Heads,2485,Claire Bridges,, NSW,Narrabeen,2101,,01/06/2017,2016/17,2017 Q4,12
+,,,Ulladulla,2539,George Chester,, NSW,Nowra,2541,,01/07/2017,2017/18,2018 Q1,1
+,,,Nowra,2541,George Chester,, NSW,Orange,2800,,01/08/2017,2017/18,2018 Q1,2
+,,,Campbelltown,2560,George Chester,, NSW,Penrith,2750,,,,,
+,,,Fyshwick,2609,George Chester,, NSW,Randwick,2031,,,,,
+,,,Belconnen,2617,George Chester,, NSW,Rydalmere,2116,,,,,
+,,,Wagga Wagga,2650,John Gardner,, NSW,Thornleigh,2120,,,,,
+,,,Penrith,2750,John Gardner,, NSW,Tweed Heads,2485,,,,,
+,,,Lithgow,2790,John Gardner,, NSW,Ulladulla,2539,,,,,
+,,,Bathurst,2795,John Gardner,, NSW,Wagga Wagga,2650,,,,,
+,,,Orange,2800,John Gardner,, NT,Alice Springs,870,,,,,
+,,,Dubbo,2830,John Gardner,, NT,Darwin,800,,,,,
+,,,Altona,3018,Brian Hubbard,, QLD,Airlie Beach,4802,,,,,
+,,,Werribee,3030,Brian Hubbard,, QLD,Atherton,4883,,,,,
+,,,Collingwood,3066,Brian Hubbard,, QLD,Burleigh Waters,4220,,,,,
+,,,Epping,3076,Brian Hubbard,, QLD,Cairns,4870,,,,,
+,,,Nunawading,3131,Rachael Long,, QLD,Caloundra,4551,,,,,
+,,,Ringwood,3134,Rachael Long,, QLD,Gladstone,4680,,,,,
+,,,Croydon,3136,Rachael Long,, QLD,Gympie,4570,,,,,
+,,,Chadstone,3148,Rachael Long,, QLD,Hervey Bay,4655,,,,,
+,,,Dandenong,3175,Rachael Long,, QLD,Indooroopilly,4068,,,,,
+,,,Scoresby,3179,Rachael Long,, QLD,Ipswich,4305,,,,,
+,,,Frankston,3199,Rachael Long,, QLD,Mackay,4740,,,,,
+,,,Warrnambool,3280,Jerry Fulton,, QLD,Maroochydore,4558,,,,,
+,,,Ballarat,3353,Jerry Fulton,, QLD,Mt Isa,4825,,,,,
+,,,Horsham,3400,Jerry Fulton,, QLD,Noosaville,4566,,,,,
+,,,Sunbury,3429,Jerry Fulton,, QLD,North Lakes,4509,,,,,
+,,,Mildura,3500,Jerry Fulton,, QLD,Rockhampton,4700,,,,,
+,,,Bendigo,3550,Jerry Fulton,, QLD,Southport,4215,,,,,
+,,,Epsom,3551,Jerry Fulton,, QLD,Stafford,4053,,,,,
+,,,Shepparton,3630,Owen Pierce,, QLD,Toombul,4012,,,,,
+,,,Wodonga,3690,Owen Pierce,, QLD,Underwood,4119,,,,,
+,,,Hastings,3915,Owen Pierce,, QLD,Yeppoon,4703,,,,,
+,,,Mornington,3931,Owen Pierce,, SA,Berri,5343,,,,,
+,,,Cranbourne,3977,Owen Pierce,, SA,Marion,5043,,,,,
+,,,Toombul,4012,Terri Wright,, SA,Mt Gambier,5290,,,,,
+,,,Stafford,4053,Terri Wright,, SA,Noarlunga,5168,,,,,
+,,,Indooroopilly,4068,Terri Wright,, SA,Port Lincoln,5607,,,,,
+,,,Underwood,4119,Terri Wright,, SA,Prospect,5082,,,,,
+,,,Southport,4215,Ricky Wilkinson,, SA,Seaford,5169,,,,,
+,,,Burleigh Waters,4220,Ricky Wilkinson,, SA,Woodville,5011,,,,,
+,,,Ipswich,4305,Ricky Wilkinson,, TAS,Burnie,7320,,,,,
+,,,North Lakes,4509,Ricky Wilkinson,, TAS,Glenorchy,7010,,,,,
+,,,Caloundra,4551,Shellie Thomas,, TAS,Launceston,7250,,,,,
+,,,Maroochydore,4558,Shellie Thomas,, TAS,Rosny Park,7018,,,,,
+,,,Noosaville,4566,Shellie Thomas,, VIC,Altona,3018,,,,,
+,,,Gympie,4570,Shellie Thomas,, VIC,Ballarat,3353,,,,,
+,,,Hervey Bay,4655,Amber Ward,, VIC,Bendigo,3550,,,,,
+,,,Gladstone,4680,Amber Ward,, VIC,Chadstone,3148,,,,,
+,,,Rockhampton,4700,Amber Ward,, VIC,Collingwood,3066,,,,,
+,,,Yeppoon,4703,Amber Ward,, VIC,Cranbourne,3977,,,,,
+,,,Mackay,4740,Amber Ward,, VIC,Croydon,3136,,,,,
+,,,Airlie Beach,4802,Caroline Tucker,, VIC,Dandenong,3175,,,,,
+,,,Mt Isa,4825,Caroline Tucker,, VIC,Epping,3076,,,,,
+,,,Cairns,4870,Caroline Tucker,, VIC,Epsom,3551,,,,,
+,,,Atherton,4883,Caroline Tucker,, VIC,Frankston,3199,,,,,
+,,,Woodville,5011,Ray Watson,, VIC,Hastings,3915,,,,,
+,,,Marion,5043,Ray Watson,, VIC,Horsham,3400,,,,,
+,,,Prospect,5082,Ray Watson,, VIC,Mildura,3500,,,,,
+,,,Noarlunga,5168,Ray Watson,, VIC,Mornington,3931,,,,,
+,,,Seaford,5169,Ray Watson,, VIC,Nunawading,3131,,,,,
+,,,Mt Gambier,5290,Alex Nash,, VIC,Ringwood,3134,,,,,
+,,,Berri,5343,Alex Nash,, VIC,Scoresby,3179,,,,,
+,,,Port Lincoln,5607,Alex Nash,, VIC,Shepparton,3630,,,,,
+,,,Claremont,6010,Tom McKenzie,, VIC,Sunbury,3429,,,,,
+,,,Balcatta,6021,Tom McKenzie,, VIC,Warrnambool,3280,,,,,
+,,,Joondalup,6027,Tom McKenzie,, VIC,Werribee,3030,,,,,
+,,,Mindarie,6030,Tom McKenzie,, VIC,Wodonga,3690,,,,,
+,,,Inglewood,6052,Tom McKenzie,, WA,Albany,6330,,,,,
+,,,Maddington,6109,Miles Hammond,, WA,Balcatta,6021,,,,,
+,,,Harrisdale,6112,Miles Hammond,, WA,Broome,6725,,,,,
+,,,Bussleton,6280,Miles Hammond,, WA,Bussleton,6280,,,,,
+,,,Albany,6330,Miles Hammond,, WA,Claremont,6010,,,,,
+,,,Esperance,6450,John Harper,, WA,Esperance,6450,,,,,
+,,,Geraldton,6530,John Harper,, WA,Geraldton,6530,,,,,
+,,,Canarvon,6701,John Harper,, WA,Harrisdale,6112,,,,,
+,,,Broome,6725,John Harper,, WA,Inglewood,6052,,,,,
+,,,Glenorchy,7010,Simone Prior,, WA,Joondalup,6027,,,,,
+,,,Rosny Park,7018,Simone Prior,, WA,Maddington,6109,,,,,
+,,,Launceston,7250,Simone Prior,, WA,Mindarie,6030,,,,,
+,,,Burnie,7320,Simone Prior,, WA,Canarvon,6701,,,,,
