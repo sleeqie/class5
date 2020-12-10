@@ -58,7 +58,138 @@ gg1 + facet_grid(color ~ cut)   # In a grid
 #The ggfortify package makes it very easy to plot time series directly from a time series object, without having to convert it to a dataframe.
 install.packages("ggfortify")
 library(ggfortify)
-autoplot(AirPassengers) + labs(title="AirPassengers")  # where AirPassengers is a 'ts' object
+autoplot(airmiles) + labs(title="Airmiles")  # where AirPassengers is a 'ts' object
+
+#Plot multiple timeseries on same ggplot
+#Plotting multiple timeseries requires that you have your data in dataframe format, in which one of the columns is the dates that will be used for X-axis.
+#Approach 1: After converting, you just need to keep adding multiple layers of time series one on top of the other.
+#Approach 2: Melt the dataframe using reshape2::melt by setting the id to the date field. Then just add one geom_line and set the color aesthetic to variable (which was created during the melt).
+# Approach 1:
+data("economics", package="ggplot2")  # init data
+economics <- data.frame(economics)  # convert to dataframe
+ggplot(economics) + geom_line(aes(x=date, y=pce, color="pcs")) + geom_line(aes(x=date, y=unemploy, col="unemploy")) + scale_color_discrete(name="Legend") + labs(title="Economics") # plot multiple time series using 'geom_line's
+# Approach 2:
+library(reshape)
+df <- melt(economics[, c("date", "pce", "unemploy")], id="date")
+ggplot(df) + geom_line(aes(x=date, y=value, color=variable)) + labs(title="Economics")# plot multiple time series by melting
+#The disadvantage with ggplot2 is that it is not possible to get multiple Y-axis on the same plot. 
+#To plot multiple time series on the same scale can make few of the series appear small. 
+#An alternative would be to facet_wrap it and set the scales='free'.
+df <- melt(economics[, c("date", "pce", "unemploy", "psavert")], id="date")
+ggplot(df) + geom_line(aes(x=date, y=value, color=variable))  + facet_wrap( ~ variable, scales="free")
+
+#Bar charts
+plot1 <- ggplot(mtcars, aes(x=cyl)) + geom_bar() + labs(title="Frequency bar chart")  
+# Y axis derived from counts of X item
+print(plot1)
+#However, if you would like the make a bar chart of the absolute number
+#given by Y aesthetic, you need to set stat="identity" inside the geom_bar.
+df <- data.frame(var=c("a", "b", "c"), nums=c(1:3))
+plot2 <- ggplot(df, aes(x=var, y=nums)) + geom_bar(stat = "identity")  # Y axis is explicit. 'stat=identity'
+print(plot2)
+
+# Custom layout
+#The gridExtra package provides the facility to arrage multiple ggplots in a single grid.
+library(gridExtra)
+grid.arrange(plot1, plot2, ncol=2)
+
+#Flipping coordinates #thsi flips the bar chart
+df <- data.frame(var=c("a", "b", "c"), nums=c(1:3))
+ggplot(df, aes(x=var, y=nums)) + geom_bar(stat = "identity") + coord_flip() + labs(title="Coordinates are flipped")
+
+#Adjust X and Y axis limits
+#There are 3 ways to change the X and Y axis limits.
+#Using coord_cartesian(xlim=c(x1,x2))
+#Using xlim(c(x1,x2))
+#Using scale_x_continuous(limits=c(x1,x2))
+ggplot(diamonds, aes(x=carat, y=price, color=cut)) + geom_point() + geom_smooth() + coord_cartesian(ylim=c(0, 10000)) + labs(title="Coord_cartesian zoomed in!")
+ggplot(diamonds, aes(x=carat, y=price, color=cut)) + geom_point() + geom_smooth() + ylim(c(0, 10000)) + labs(title="Datapoints deleted: Note the change in smoothing lines!")
+
+#Equal coordinate
+ggplot(diamonds, aes(x=price, y=price+runif(nrow(diamonds), 100, 10000), color=cut)) + geom_point() + geom_smooth() + coord_equal()
+
+#Change themes
+#Apart from the basic ggplot2 theme, you can change the look and feel of your plots using one of these builtin themes.
+theme_gray()
+theme_bw()
+theme_linedraw()
+theme_light()
+theme_minimal()
+theme_classic()
+theme_void()
+#The ggthemes package provides additional ggplot themes that imitates famous magazines and softwares. Here is an example of how to change the theme.
+ggplot(diamonds, aes(x=carat, y=price, color=cut)) + geom_point() + geom_smooth() +theme_bw() + labs(title="bw Theme")
+
+#Legend - Deleting and Changing Position
+#By setting theme(legend.position="none"), you can remove the legend. By setting it to ‘top’, i.e. theme(legend.position="top"), you can move the legend around the plot. By setting legend.postion to a co-ordinate inside the plot you can place the legend inside the plot itself. The legend.justification denotes the anchor point of the legend, i.e. the point that will be placed on the co-ordinates given by legend.position.
+
+p1 <- ggplot(diamonds, aes(x=carat, y=price, color=cut)) + geom_point() + geom_smooth() + theme(legend.position="none") + labs(title="legend.position='none'")  # remove legend
+p2 <- ggplot(diamonds, aes(x=carat, y=price, color=cut)) + geom_point() + geom_smooth() + theme(legend.position="top") + labs(title="legend.position='top'")  # legend at top
+p3 <- ggplot(diamonds, aes(x=carat, y=price, color=cut)) + geom_point() + geom_smooth() + labs(title="legend.position='coords inside plot'") + theme(legend.justification=c(1,0), legend.position=c(1,0))  # legend inside the plot.
+grid.arrange(p1, p2, p3, ncol=3)  # arrange
+
+#Grid lines
+ggplot(mtcars, aes(x=cyl)) + geom_bar(fill='darkgoldenrod2') +
+  theme(panel.background = element_rect(fill = 'steelblue'),
+        panel.grid.major = element_line(colour = "firebrick", size=3),
+        panel.grid.minor = element_line(colour = "blue", size=1))
+
+
+#Plot margin and background
+ggplot(mtcars, aes(x=cyl)) + geom_bar(fill="firebrick") + theme(plot.background=element_rect(fill="steelblue"), plot.margin = unit(c(2, 4, 1, 3), "cm")) # top, right, bottom, left
+
+#Annotation
+library(grid)
+my_grob = grobTree(textGrob("This text is at x=0.1 and y=0.9, relative!\n Anchor point is at 0,0", x=0.1,  y=0.9, hjust=0,
+                            gp=gpar(col="firebrick", fontsize=25, fontface="bold")))
+ggplot(mtcars, aes(x=cyl)) + geom_bar() + annotation_custom(my_grob) + labs(title="Annotation Example")
+
+#Saving ggplot
+plot1 <- ggplot(mtcars, aes(x=cyl)) + geom_bar()
+ggsave("myggplot.png")  # saves the last plot.
+ggsave("myggplot.png", plot=plot1)  # save a stored ggplot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
