@@ -1,3 +1,63 @@
+#HOW TO USE PIECHART
+df <- data.frame(
+  group = c("Male", "Female", "Child"),
+  value = c(25, 25, 50)) #created data frame
+head(df) 
+#Use a barplot to visualize the data :
+library(ggplot2)
+# Barplot
+bp<- ggplot(df, aes(x="", y=value, fill=group))+
+  geom_bar(width = 1, stat = "identity")
+bp
+#Create a pie chart :
+pie <- bp + coord_polar("y", start=0)
+pie
+# Use custom color palettes
+pie + scale_fill_manual(values=c("#999999", "#E69F00", "#56B4E9"))
+# use brewer color palettes
+pie + scale_fill_brewer(palette="Dark2")
+
+pie + scale_fill_brewer(palette="Blues")+
+  theme_minimal()
+# Use grey scale
+pie + scale_fill_grey() + theme_minimal()
+#Create a pie chart from a factor variable:
+head(PlantGrowth)
+ggplot(PlantGrowth, aes(x=factor(1), fill=group))+
+  geom_bar(width = 1)+
+  coord_polar("y")
+#Customized pie charts
+#Create a blank theme :
+blank_theme <- theme_minimal()+
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    panel.border = element_blank(),
+    panel.grid=element_blank(),
+    axis.ticks = element_blank(),
+    plot.title=element_text(size=14, face="bold")
+  )
+#Apply the blank theme. Remove axis tick mark labels. Add text annotations : The package scales is used to format the labels in percent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Example of thus learnt so far
 data.frame(iris)
 flower <- data.frame(iris)
@@ -110,7 +170,38 @@ l + geom_raster(aes(fill = z), hjust=0.5,
                 vjust=0.5, interpolate=FALSE)
 l + geom_tile(aes(fill = z))
 
+#SCALES.
+#To customize a discrete bar chart
+d <- ggplot(mpg, aes(fl))
+d
+n <- d + geom_bar(aes(fill = fl))
+n
+n + scale_fill_manual(
+  values = c("skyblue", "royalblue", "blue", "navy"), 
+  limits = c("d", "e", "p", "r"), 
+  breaks =c("d", "e", "p", "r"), 
+  name = "fuel", labels = c("D", "E", "P", "R"))
 
+#General Purpose scales
+#Use with any aesthetic: alpha, color, fill, linetype, shape, size
+scale_continuous() #- map cont’ values to visual values 
+scale_discrete() #- map discrete values to visual values 
+scale_identity() #- use data values as visual values 
+scale_manual(values = c()) #- map discrete values to manually chosen visual values
+
+#X and Y location scales
+#Use with x or y aesthetics (x shown here)
+scale_x_date(date_labels = "%m/%d") date_breaks = "2 weeks") #- treat x values as dates.
+#See ?strptime for label formats. 
+scale_x_datetime() #- treat x values as date times. Use same arguments as scale_x_date(). 
+scale_x_log10() #- Plot x on log10 scale scale_x_reverse() - Reverse direction of x axis scale_x_sqrt() - Plot x on square root scale
+
+#Color and fill scales
+
+#Faceting
+t <- ggplot(mpg, aes(cty, hwy)) + geom_point()
+t
+t + facet_grid(. ~ fl)
 
 
 
